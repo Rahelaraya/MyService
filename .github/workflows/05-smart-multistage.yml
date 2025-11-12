@@ -66,7 +66,7 @@ jobs:
         run: dotnet publish MyService.Api/MyService.Api.csproj -c Release -o ./out
       - name: Simulate DEV deploy
         run: |
-          echo "Deploying ${SERVICE_NAME} to DEV..."
+          echo "Deploying $SERVICE_NAME to DEV..."
           ls -la ./out
           echo "✅ Deployment completed successfully"
 
@@ -92,6 +92,6 @@ jobs:
         run: dotnet publish MyService.Api/MyService.Api.csproj -c Release -o ./out
       - name: Simulate PROD deploy
         run: |
-          echo "Deploying ${SERVICE_NAME} to PROD with key $PROD_API_KEY..."
+          echo "Deploying $SERVICE_NAME to PROD with key $PROD_API_KEY..."
           ls -la ./out
           echo "✅ Deployment completed successfully"
